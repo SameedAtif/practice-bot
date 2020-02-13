@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <category>
+        <pattern>^ DO YOU LIKE GAMES ^</pattern>
+        <template>YES! LETS TALK ABOUT <set name = "topic">GAMES</set>!!</template>
+        
+    </category>
+    
+    <topic name ="GAMES">
+        <category>
+            <pattern>^ GAME ^ LIKE ^</pattern>
+            <template>I love all shooting games</template>
+        </category>
+        <category>
+            <pattern>^ GAMES ^ LIKE ^</pattern>
+            <template>I love all shooting games</template>
+        </category>
+        
+        <category>
+            <pattern>NO ^</pattern>
+            <template>Well no one is perfect ð</template>
+        </category>
+        <category>
+            <pattern>YES ^</pattern>
+            <template>AWESOME! ð</template>
+        </category>
+        <category>
+            <pattern>ME TOO ^</pattern>
+            <template>AWESOME! ð</template>
+        </category>
+        <!--use that tag -->
+        <category>
+            <pattern>WHY ^</pattern>
+            <that>I love all shooting games</that>
+            <template>BECAUSE THEY ARE FULL OF ACTION AND THRILL ð</template>
+        </category>
+        
+        <category>
+            <pattern>^ REASON ^</pattern>
+            <that>I love all shooting games</that>
+            <template>BECAUSE THEY ARE FULL OF ACTION AND THRILL ð</template>
+        </category>
+        
+        <category>
+            <pattern> ^ RECOMMEND ^ GAME </pattern>
+            <template>
+                <think><set name = "state"> no</set></think>
+                <condition name = "state" value = "no">
+                    no, it's boring
+                </condition>s
+                <condition name = "state" value = "yes">
+                    Ok, what do you want?
+                </condition>
+            </template>
+        </category>
+    </topic>
+	<!-- insert your AIML categories here -->
+</aiml>

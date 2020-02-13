@@ -3,30 +3,94 @@
     <!--How to match detailed patterns: Hello my name is?-->
     <!--How to be the first to ask or say something-->
     <!--How to provide options-->
-    
+    <!--Base case-->
     <category>
+	    <set bot-name = "bot-name">greeting-bot</set>
         <pattern>HELLO</pattern>
         <template>
             <random>
-                <li> Hello! </li>
-                <li> Hi! Nice to meet you! </li>
+                <li> Hello! Friend my name is greeting-bot, what is your good name?</li>
+                <li> Hi! Nice to meet you! my name is greeting-bot, who might you be?</li>
             </random>
         </template>
     </category>
-    
+    <!--Generic cultural greetings-->
     <category>
-        <pattern>^ My name is *</pattern>
+	    <set bot-name = "bot-name">greeting-bot</set>
+        <pattern>^ HI ^</pattern>
+        <template>
+            <srai>
+                HELLO
+            </srai>
+        </template>
+    </category>
+    <category>
+	    <set bot-name = "bot-name">greeting-bot</set>
+        <pattern>^ HELLO ^</pattern>
+        <template>
+            <srai>
+                HELLO
+            </srai>
+        </template>
+    </category>
+    <category>
+	    <set bot-name = "bot-name">greeting-bot</set>
+        <pattern>^ GREETINGS ^</pattern>
+        <template>
+            <srai>
+                HELLO
+            </srai>
+        </template>
+    </category>
+    <category>
+	    <set bot-name = "bot-name">greeting-bot</set>
+        <pattern>^ WHATSUP ^</pattern>
+        <template>
+            <srai>
+                HELLO
+            </srai>
+        </template>
+    </category>
+    
+    <!--User name-->
+    <category>
+        <pattern>^ MY NAME IS *</pattern>
         <template>
             <random>
-                <li> Hello! <set name = "user-name"><star index = "2"/></set></li>
-                <li> Hi! Nice to meet you <set name = "user-name"><star /></set>! </li>
+                <li> It's a pleasure meeting you <set name = "user-name"><star index = "2"/></set></li>
+                <li> Nice to meet you <set name = "user-name"><star index = "2"/></set>! </li>
             </random>
         </template>
     </category>
     
     <category>
-        <pattern>* LIKE MOVIES ^</pattern>
-        <template>In anycase I love movies</template>
+        <pattern>^ I'M *</pattern>
+        <template>
+            <random>
+                <li> It's a pleasure meeting you <set name = "user-name"><star index = "2"/></set></li>
+                <li> Nice to meet you <set name = "user-name"><star index = "2"/></set>! </li>
+            </random>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>^ THE NAME IS *</pattern>
+        <template>
+            <random>
+                <li> It's a pleasure meeting you <set name = "user-name"><star index = "2"/></set></li>
+                <li> Nice to meet you <set name = "user-name"><star index = "2"/></set>! </li>
+            </random>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>^ BYE *</pattern>
+        <template>
+            <random>
+                <li> It's was a pleasure meeting you</li>
+                <li> Goodbye and good ridance! </li>
+            </random>
+        </template>
     </category>
     
     <category>
